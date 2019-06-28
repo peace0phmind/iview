@@ -1,7 +1,7 @@
 <template>
     <div v-transfer-dom :data-transfer="transfer">
         <transition name="fade">
-            <div :class="maskClasses" :style="maskStyle" v-if="visible" v-if="mask" @click="handleMask"></div>
+            <div :class="maskClasses" :style="maskStyle" v-if="visible && mask" @click="handleMask"></div>
         </transition>
         <div :class="wrapClasses" @click="handleWrapClick">
             <transition :name="'move-' + placement">
